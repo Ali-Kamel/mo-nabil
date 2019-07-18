@@ -1,0 +1,418 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Clean Blog - Start Bootstrap Theme</title>
+
+  <!-- Bootstrap core CSS -->
+
+  <!-- Custom fonts for this template -->
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+
+    {% block head %}
+    {% endblock %}
+
+</head>
+{% block body %}
+
+<body>
+<style type="text/css">
+  
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+.btn
+{
+  color: white;
+}
+@media (max-width: 1000px)  {
+    .btn  {color: rgba(0,0,0,.5); }
+}
+</style>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <img  class="navbar-brand" src="{% static 'img/1.gif'%}" style="width:10%">
+      <a class="navbar-brand" href="{% url 'home' %}">EPCCO</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About Us</a>
+          </li>
+          <li  class="nav-item">
+            <!-- here -->
+             <div class="dropdown">
+            <button class="btn  dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 1px; letter-spacing: 0px; text-transform: none; font-weight: 700; font-size: 15px; margin-top: 4px;" >
+              Service
+            </button>
+            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+
+                <li class="dropdown-submenu">
+                  <a  class="dropdown-item" tabindex="-1" href="#">Construction</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" href="#">Steel Structure</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="{% url 'url1' %}">Prefabircation, fubrication and<br>errection of steel structure</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{% url 'url2' %}">Steel structure skid fabrication and<br>coating</a></li>
+                        </ul>
+                    </li>            
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" href="#">Marine structure</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="{% url 'url3' %}">Manufacture and maintenance of<br> marine ships</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{% url 'url4' %}">Construction and repair of<br> marine parts</a></li>
+                        </ul>
+                    </li>    
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" href="#">Piping and pipe line construction</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="{% url 'url5' %}">Oil tank fire fighting piping</a></li>
+                            <li class="dropdown-item"><a href="{% url 'url6' %}">Piping construction and coating</a></li>
+                            <li class="dropdown-item"><a href="{% url 'url7' %}">Piping construction and coating (2)</a></li>
+                        </ul>
+                    </li>    
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" href="#">Vassel and tanks construction</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="{% url 'url8' %}">Ammonia spherical tank maintenance<br> inspechion welding and heat treatment</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{% url 'url9' %}">Copper heat exchanger soldering</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{% url 'url10' %}">Dismandteling and reconstruction of<br>water tube boiler 120 ton-h steam at NFF</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{% url 'url11' %}">Dismantle a waste heat boiler <br> at nitric acicl plant</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{% url 'url12' %}">Maintenance of heat<br>exchangers piping</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{% url 'url13' %}">Heat exchanger repair</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{% url 'url14' %}">Retubing heat exchanger</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{% url 'url15' %}">Tanks Fabrication</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{% url 'url16' %}">Titanium tube at nitric acid plant</a></li>
+                        </ul>
+                    </li>            
+                  </ul>
+                </li>
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-submenu">
+                  <a  class="dropdown-item" tabindex="-1" href="#">Wear abrasion</a>
+                  <ul class="dropdown-menu">
+
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" href="#">Hard plates</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="{% url 'url17' %}">Manufacture of hard wear cone(quenched)</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" href="#">Hard facing</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="{% url 'url18' %}">Selection of the suitable hard facing electrocle</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-divider"></li>
+
+                  <li class="dropdown-submenu">
+                  <a  class="dropdown-item" tabindex="-1" href="#">Heavy trucky repair</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a tabindex="-1" href="{% url 'url19' %}">Maintenance of heavy trucks structure</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url20' %}">Manufacture and welding of heads of heavy trucks of mantrack</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url21' %}">Repair of damaged hydrolic pislon of loader aa6f</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url22' %}">Repair of treated and cracked loader bucket</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url23' %}">Welding repair of heavy truck rims</a></li>
+                  </ul>
+                <!-- here2 -->
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-submenu">
+                  <a  class="dropdown-item" tabindex="-1" href="#">Welding</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" href="#">Corbon Steel Welding and repair</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="{% url 'url24' %}">Dismanteling old expansion joint<br>and assembly new one</a></li>
+                            <li class="dropdown-divider"></li>
+
+                              <li class="dropdown-item"><a href="{% url 'url25' %}">Dismanteling the DRI reactor spod<br>and assembly on orfice flang</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" href="#">Stainless steel Welding and repair</a>
+                      <ul class="dropdown-menu">
+                          <li class="dropdown-item"><a href="{% url 'url26' %}">Compressor housing ss304 repair</a></li>
+                          <li class="dropdown-divider"></li>
+                          <li class="dropdown-item"><a href="{% url 'url27' %}">Replacement of the second stage<br>of nitricacid lower ss304L</a></li>
+                          <li class="dropdown-divider"></li>
+                          <li class="dropdown-item"><a href="{% url 'url28' %}">Welding repair ss304H tube<br>cladded innerly by hard facing layer</a></li>
+
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" href="#">Cast iron Welding and repair</a>
+                      <ul class="dropdown-menu">
+                          <li class="dropdown-item"><a href="{% url 'url29' %}">Welding of Broken and cracked parts<br>for cast iron pump housing</a></li>
+                          <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><a href="{% url 'url30' %}">Welding of Broken and cracked parts<br>for cast iron pump housing 2</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" href="#">Copper Welding and repair</a>
+                      <ul class="dropdown-menu">
+                          <li class="dropdown-item"><a href="{% url 'url31' %}">Project 1</a></li>
+                            <li class="dropdown-item"><a href="{% url 'url32' %}">Project 2</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" href="#">Aluminume welding and repair</a>
+                      <ul class="dropdown-menu">
+                          <li class="dropdown-item"><a href="{% url 'url33' %}">Project 1</a></li>
+                            <li class="dropdown-item"><a href="{% url 'url34' %}">Project 2</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" href="#">Nical base alloy</a>
+                      <ul class="dropdown-menu">
+                          <li class="dropdown-item"><a href="{% url 'url35' %}">Dismanteling and welding repair of<br>reformer incoloy 800 tube</a></li>
+                          <li class="dropdown-divider"></li>
+
+                            <li class="dropdown-item"><a href="{% url 'url36' %}">Repair of incolloy 800 header of<br>reforme at amonia</a></li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-submenu">
+                  <a  class="dropdown-item" tabindex="-1" href="#">Cold welding and painting</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a href="{% url 'url37' %}">Project 1</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url38' %}">Project 2</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url39' %}">Project 3</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url40' %}">Project 4</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url41' %}">Project 5</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url42' %}">Project 6</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url43' %}">Project 7</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url44' %}">Project 8</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url45' %}">Project 9</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url46' %}">Project 10</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url47' %}">Project 11</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url48' %}">Project 12</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url49' %}">Project 13</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url50' %}">Project 14</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url51' %}">Project 15</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url52' %}">Project 16</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url53' %}">Project 17</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url54' %}">Project 18</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url55' %}">Project 19</a></li>
+                    <li class="dropdown-item"><a href="{% url 'url56' %}">Project 20</a></li>
+                  </ul>
+                </li>
+
+
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" tabindex="-1" href="#">Non destructive testing</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a href="{% url 'url57' %}">Dye penetrant test</a></li>
+                    <li class="dropdown-divider"></li>
+
+                    <li class="dropdown-item"><a href="{% url 'url58' %}">Epcco NDT test</a></li>
+                    <li class="dropdown-divider"></li>
+
+                    <li class="dropdown-item"><a href="{% url 'url59' %}">Ultra sonic</a></li>
+
+                  </ul>
+                </li>
+                <!-- here 2-->
+              </ul>
+        </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contactinfo' %}">Contact-Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'news' %}">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'events' %}">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'ourteam' %}">Our Team</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{% static 'img/home-bg.jpg'%}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            {% for x in Manufacture %}
+            <h2>{{x.title}}</h2>
+            <span class="meta">Posted 
+              on April 30, 2019</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          {% for x in Manufacture %}
+          <p>{{x.text}}</p>
+
+          {% endfor %}
+          <div class="container">
+
+            <style>
+            .mySlides {display:none;}
+            </style>
+            <div class="w3-content w3-display-container">
+              {% for x in Manufacture %}
+              <img class="mySlides" src="{{x.img1.url}}" style="width:100%">
+              <img class="mySlides" src="{{x.img2.url}}" style="width:100%">
+              <img class="mySlides" src="{{x.img3.url}}" style="width:100%">
+              <img class="mySlides" src="{{x.img4.url}}" style="width:100%">
+              <img class="mySlides" src="{{x.img5.url}}" style="width:100%">
+              <img class="mySlides" src="{{x.img6.url}}" style="width:100%">
+              <img class="mySlides" src="{{x.img7.url}}" style="width:100%">
+
+              {% endfor %}
+
+              <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+              <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+
+            <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+            </script>
+          </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/Epcco-496432534056091/">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; EPCCO 2019</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+{%endblock%}
+
+</html>

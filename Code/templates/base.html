@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+
+{% load static %}
+<html>
+<head>  
+
+	<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/clean-blog.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/hover.css' %}" rel="stylesheet">
+  	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!--   	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+ -->
+
+	<title>{% block title %}EPCCO{% endblock %}</title>
+</head>
+
+<body>
+	{% block body %}
+	{% endblock %}
+	<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'js/clean-blog.js' %}"></script>
+	<script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+	<script src="{% static 'js/contact_me.js' %}"></script>
+
+
+</body>
+</html>
